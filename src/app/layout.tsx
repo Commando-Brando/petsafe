@@ -9,12 +9,25 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+function TopNav() {
+  return (
+    <nav className="flex w-full items-center justify-between p-4 text-xl font-semibold border-b">
+      <div>Products</div>
+      <div>Sign In</div>
+    </nav>
+  )
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body>{children}</body>
+      {/* flex-col + gap is temporary solution change to grid later 21:00 */}
+      <body className="flex flex-col gap-4">
+        <TopNav />
+        {children}
+      </body>
     </html>
   );
 }
