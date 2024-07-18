@@ -27,3 +27,11 @@ You can check out the [create-t3-app GitHub repository](https://github.com/t3-os
 ## How do I deploy this?
 
 Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+
+
+# TODO
+
+- [ ] Scrape some ingredients related to dog health 
+- [ ] Scrape online products that contain healthy ingredients for dogs
+- [ ] Create landing page that lets user paste a link to a site or image (image may be future feature)
+- [ ] Healthy products page to display our recommended healthy products
