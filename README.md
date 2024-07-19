@@ -35,3 +35,4 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 - [ ] Scrape online products that contain healthy ingredients for dogs
 - [ ] Create landing page that lets user paste a link to a site or image (image may be future feature)
 - [ ] Healthy products page to display our recommended healthy products
+- [ ] Have lots of add email for discounts components
