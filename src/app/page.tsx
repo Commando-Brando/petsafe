@@ -1,3 +1,4 @@
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Link from "next/link";
 import { db } from "~/server/db";
 
@@ -9,10 +10,10 @@ export default async function HomePage() {
     orderBy: (model, { desc }) => desc(model.id),
   });
 
-  return (
-    <main className="">
-      {/* flex wrap means it wont stop with one row and will make multiple rows*/}
-      {/* Gap adds spacing between images  */}
+  function Products() {
+    return (
+      /* flex wrap means it wont stop with one row and will make multiple rows*/
+      /* Gap adds spacing between images  */
       <div className="flex flex-wrap gap-4">
         {[...products, ...products, ...products].map((product, index) => (
           <div key={product.id + "-" + index} className="flex w-48 flex-col">
@@ -21,6 +22,17 @@ export default async function HomePage() {
           </div>
         ))}
       </div>
+    )
+  }
+
+  return (
+    <main className="">
+      <SignedOut>
+        <div className="w-full h-full text-2xl text-center">Please sign in above</div>
+      </SignedOut>
+      <SignedIn>
+        <Products />
+      </SignedIn>
     </main>
   );
 }
