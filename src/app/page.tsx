@@ -1,13 +1,12 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { db } from "~/server/db";
+import { getMyProducts } from "~/server/queries";
 
 export const dynamic = "force-dynamic"
 
 export default async function HomePage() {
 
-  const products = await db.query.products.findMany({
-    orderBy: (model, { desc }) => desc(model.id),
-  });
+  const products = await getMyProducts();
 
   function Products() {
     return (

@@ -36,3 +36,12 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 - [ ] Create landing page that lets user paste a link to a site or image (image may be future feature)
 - [ ] Healthy products page to display our recommended healthy products
 - [ ] Have lots of add email for discounts components
+
+# Data Scraping
+
+- [ ] Scrape top 1000 dog treat/food products
+- [ ] Parse ingredients
+- [ ] Search for research papers on ingredients
+- [ ] Parse research paper conclusions grouped by ingredient
+- [ ] use LLM to summarize sentiment of each ingredient
+- [ ] Condense ingredient data into a summary (1-2 sentence description of research outcome), category safe/unsafe/mixed/unkown, and citation links to relevant papers.
