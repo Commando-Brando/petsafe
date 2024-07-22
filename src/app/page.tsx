@@ -1,5 +1,6 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Image from "next/image";
+import Link from "next/link";
 import { getMyProducts } from "~/server/queries";
 
 export const dynamic = "force-dynamic"
@@ -15,12 +16,14 @@ export default async function HomePage() {
       <div className="flex flex-wrap justify-center gap-4">
         {products.map((product) => (
           <div key={product.id} className="flex w-48 h-48 flex-col">
-            <Image
-            src={product.url}
-            alt="image" style={{objectFit: "contain"}}
-            width={480}
-            height={480}
-            />
+            <Link href={`/products/${product.id}`}>
+              <Image
+              src={product.url}
+              alt="image" style={{objectFit: "contain"}}
+              width={480}
+              height={480}
+              />
+            </Link>
             <div>{product.name}</div>
           </div>
         ))}
