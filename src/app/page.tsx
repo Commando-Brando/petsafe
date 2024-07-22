@@ -1,5 +1,5 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
-import { db } from "~/server/db";
+import Image from "next/image";
 import { getMyProducts } from "~/server/queries";
 
 export const dynamic = "force-dynamic"
@@ -12,10 +12,15 @@ export default async function HomePage() {
     return (
       /* flex wrap means it wont stop with one row and will make multiple rows*/
       /* Gap adds spacing between images  */
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap justify-center gap-4">
         {products.map((product) => (
-          <div key={product.id} className="flex w-48 flex-col">
-            <img src={product.url} alt="image" />
+          <div key={product.id} className="flex w-48 h-48 flex-col">
+            <Image
+            src={product.url}
+            alt="image" style={{objectFit: "contain"}}
+            width={480}
+            height={480}
+            />
             <div>{product.name}</div>
           </div>
         ))}
