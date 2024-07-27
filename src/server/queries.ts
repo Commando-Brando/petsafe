@@ -13,3 +13,16 @@ export async function getMyProducts() {
     });
     return products;
 }
+
+export async function getProduct(id: number) {
+    const user = auth();
+    if (!user.userId) throw new Error("Unauthorized");
+
+    const product = await db.query.products.findFirst({
+        where: (model, { eq }) => eq(model.id, id),
+    })
+
+    if (!product) throw new Error("Product not found");
+
+    return product
+}
