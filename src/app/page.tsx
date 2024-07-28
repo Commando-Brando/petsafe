@@ -13,8 +13,8 @@ export default async function HomePage() {
     return (
       /* flex wrap means it wont stop with one row and will make multiple rows*/
       /* Gap adds spacing between images  */
-      <div className="flex flex-wrap justify-center gap-4">
-        {products.map((product) => (
+      <div className="flex flex-wrap justify-center gap-4 p-4">
+        {[...products, ...products, ...products, ...products].map((product) => (
           <div key={product.id} className="flex w-48 h-48 flex-col">
             <Link href={`/products/${product.id}`}>
               <Image

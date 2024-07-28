@@ -36,9 +36,15 @@ export default function RootLayout({
           routerConfig={extractRouterConfig(ourFileRouter)}
         />
         {/* flex-col + gap is temporary solution change to grid later 21:00 */}
-        <body className="flex flex-col gap-4">
-          <TopNav />
-          {children}
+        <body>
+          {/* Grid css basically, auto means to let row take up whatever space it wants  */}
+          {/* 1fr stands for 1 fraction  */}
+          <div className="h-screen grid grid-rows-[auto,1fr]">
+            <TopNav />
+            <main className="overflow-y-scroll">
+              {children}
+            </main>
+          </div>
           {modal}
           <div id="modal-root" />
         </body>
