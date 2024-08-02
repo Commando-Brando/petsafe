@@ -5,7 +5,11 @@ import { auth } from "@clerk/nextjs/server";
 export async function getMyProducts() {
     const user = auth();
 
-    if (!user.userId) throw new Error("Unauthorized");
+    // TODO: Fix this so that it does not just error out on homepage :(
+    if (!user.userId) {
+        return []
+        // throw new Error("Unauthorized");
+    }
 
     const products = await db.query.products.findMany({
         where: (model, { eq }) => eq(model.userId, user.userId),
