@@ -1,47 +1,26 @@
-# Create T3 App
+# Pet Products
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Simple NextJs Crud app that lets you load images of pet products and displays them in a nice image gallery style grid.
 
-## What's next? How do I make an app with this?
+Was a fun learning project for starting to learn the following technologies:
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- shadcn
+- tailwind
+- NextJs
+- NextJs server actions
+- NextJs page router
+- Sentry
+- Clerk
+- Drizzle
+- Postgres
+- Image hosting
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+# Demo
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+This demo shows my Drizzle studio running locally connected to PostGres and me going through the following web featres:
 
-## Learn More
+- Sign in
+- Image upload
+- Image view
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
-
-
-# TODO
-
-- [ ] Scrape some ingredients related to dog health 
-- [ ] Scrape online products that contain healthy ingredients for dogs
-- [ ] Create landing page that lets user paste a link to a site or image (image may be future feature)
-- [ ] Healthy products page to display our recommended healthy products
-- [ ] Have lots of add email for discounts components
-
-# Data Scraping
-
-- [ ] Scrape top 1000 dog treat/food products
-- [ ] Parse ingredients
-- [ ] Search for research papers on ingredients
-- [ ] Parse research paper conclusions grouped by ingredient
-- [ ] use LLM to summarize sentiment of each ingredient
-- [ ] Condense ingredient data into a summary (1-2 sentence description of research outcome), category safe/unsafe/mixed/unkown, and citation links to relevant papers.
+![image](https://github.com/user-attachments/assets/12d24b76-ea20-4af6-b0ef-d5bb097fca5d)
